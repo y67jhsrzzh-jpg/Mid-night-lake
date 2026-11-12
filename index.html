@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Lake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 引入文藝感極強的英中襯線字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+TC:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 水聲音檔 (請確保未來上傳檔案至 assets/water.mp3) -->
+    <!-- 電影底片雜訊層 -->
+    <div class="noise-overlay"></div>
+
     <audio id="ambientWater" src="assets/water.mp3" loop></audio>
-    
-    <!-- 水波紋畫布 -->
     <canvas id="lakeCanvas"></canvas>
     
-    <!-- 初始提示字 -->
     <div id="intro-text">Touch the surface</div>
     
-    <!-- 主要內容區 (初始為隱藏淡出狀態) -->
     <div id="content">
         <h1>Midnight Lake</h1>
         <p class="subtitle">獨立音樂與節拍檢索庫</p>
@@ -40,7 +42,6 @@
             </div>
         </div>
     </div>
-
     <script src="js/main.js"></script>
 </body>
 </html>
