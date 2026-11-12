@@ -1,86 +1,61 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body, html {
-    width: 100%;
-    height: 100%;
-    background-color: #050508; /* 深夜午夜藍/純黑 */
-    color: rgba(255, 255, 255, 0.6);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    overflow: hidden; /* 防止滾動破壞水面 */
+    width: 100%; height: 100%;
+    background-color: #020203; /* 極致深邃的黑 */
+    color: rgba(255, 255, 255, 0.7);
+    /* 優先使用優雅字體 */
+    font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
+    overflow: hidden;
 }
 
-/* 畫布設定置底 */
-#lakeCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+/* 漸層光暈，讓湖面有深度 */
+body::before {
+    content: ""; position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(20, 25, 35, 0.8), #020203);
+    z-index: 0; pointer-events: none;
 }
 
-/* 提示字元 */
+/* 獨立電影感的底片雜訊 */
+.noise-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.25; z-index: 0; pointer-events: none;
+}
+
+#lakeCanvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+
 #intro-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    color: rgba(255, 255, 255, 0.4);
-    transition: opacity 1.5s ease;
-    pointer-events: none;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    z-index: 3; font-size: 1.8rem; letter-spacing: 8px; font-style: italic;
+    color: rgba(255, 255, 255, 0.5); text-shadow: 0 0 15px rgba(255,255,255,0.2);
+    transition: opacity 2s ease; pointer-events: none;
 }
 
-/* 主要內容區與淡入動畫 */
 #content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10vh 20px;
-    opacity: 0; /* 預設完全透明 */
-    transition: opacity 3s ease 1s; /* 延遲 1 秒後緩慢淡入 */
-    pointer-events: none; /* 隱藏時不可點擊 */
+    position: relative; z-index: 2; max-width: 850px; margin: 0 auto;
+    padding: 12vh 20px; opacity: 0; transition: opacity 3s ease 1s; pointer-events: none;
 }
+#content.visible { opacity: 1; pointer-events: auto; }
 
-#content.visible {
-    opacity: 1;
-    pointer-events: auto;
-}
-
+/* 標題與內文排版升級 */
 h1 {
-    font-weight: 300;
-    letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 0.5rem;
+    font-size: 4rem; font-weight: 300; letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.9); margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(255,255,255,0.1);
 }
 
 .subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 4rem;
+    font-size: 1.1rem; font-weight: 200; letter-spacing: 8px; 
+    margin-bottom: 5rem; color: rgba(255, 255, 255, 0.4);
 }
 
-.genre-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
+.genre-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
 
 h2 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.8rem; font-weight: 300; font-style: italic; letter-spacing: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 0.8rem; margin-bottom: 1.5rem; color: rgba(255, 255, 255, 0.8);
 }
-
-.band-list {
-    list-style: none;
-}
+.band-list { list-style: none; }
