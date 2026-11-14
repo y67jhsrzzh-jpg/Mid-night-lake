@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hip-hop — Midnight Lake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+TC:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .genre-page {
+            max-width: 750px; margin: 0 auto; padding: 10vh 20px;
+            position: relative; z-index: 2; color: rgba(255, 255, 255, 0.8);
+        }
+        .back-link {
+            display: inline-block; margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.4); text-decoration: none;
+            font-style: italic; letter-spacing: 2px; transition: color 0.3s;
+        }
+        .back-link:hover { color: rgba(255, 255, 255, 0.9); }
+        
+        /* 曲風總介紹區塊 */
+        .genre-header { margin-bottom: 4rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 2.5rem; }
+        .genre-header h1 { font-size: 3.8rem; font-style: italic; margin-bottom: 1.2rem; }
+        .genre-desc { line-height: 1.9; font-weight: 300; color: rgba(255, 255, 255, 0.65); font-size: 1.05rem; }
+
+        /* 藝人獨立卡片區塊 */
+        .band-section-title { font-size: 1.1rem; letter-spacing: 5px; color: rgba(255, 255, 255, 0.35); margin-bottom: 2rem; text-transform: uppercase; }
+        .band-item {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2.5rem; margin-bottom: 2rem; border-radius: 2px;
+            transition: border 0.4s ease, background 0.4s ease;
+        }
+        .band-item:hover {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .band-item h3 { font-size: 2.2rem; font-weight: 300; color: rgba(255, 255, 255, 0.9); margin-bottom: 0.5rem; }
+        .band-tags { font-size: 0.85rem; letter-spacing: 2px; color: rgba(255, 255, 255, 0.4); font-style: italic; margin-bottom: 1.5rem; }
+        .band-vibe { line-height: 1.8; font-weight: 300; margin-bottom: 1.5rem; color: rgba(255, 255, 255, 0.75); }
+        .track-list { list-style: none; border-top: 1px dashed rgba(255, 255, 255, 0.1); padding-top: 1rem; }
+        .track-list li { font-size: 0.95rem; padding: 0.3rem 0; color: rgba(255, 255, 255, 0.6); font-style: italic; }
+        .track-list li::before { content: "— "; color: rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="genre-page">
+        <a href="../index.html" class="back-link">← 返回湖面</a>
+        
+        <!-- 曲風文字介紹 -->
+        <div class="genre-header">
+            <h1>Hip-hop</h1>
+            <p class="genre-desc">
+                源自 1970 年代紐約街頭的次文化運動，以取樣（Sampling）、切分碎拍與具有節奏感的韻腳敘事為核心。在深夜的湖畔聆聽，特別能感受那些沉穩的低頻貝斯線、黑膠唱片的微弱炒豆聲，以及隱藏在強硬節拍背後、對城市生活與現實掙扎的深刻詩意。
+            </p>
+        </div>
+
+        <!-- 相關藝人介紹 -->
+        <div class="band-section-title">Selected Artists / 收錄藝人</div>
+        
+        <!-- 藝人一：2Pac -->
+        <div class="band-item">
+            <h3>2Pac</h3>
+            <div class="band-tags">#West Coast Hip-hop #Poetic Rap #90s Classic</div>
+            <p class="band-vibe">
+                嘻哈史上最具詩人靈魂與悲劇色彩的傳奇人物。2Pac 的作品不只是街頭的怒吼，更充滿了對社會不公、孤獨、死亡與救贖的哲學省思。他充滿感情張力的聲線搭配靈魂樂取樣，在深夜聽來格外直擊人心。
+            </p>
+            <ul class="track-list">
+                <li>Changes</li>
+                <li>Dear Mama</li>
+                <li>Ambitionz Az a Ridah</li>
+            </ul>
+        </div>
+
+        <!-- 藝人二：Ice Cube -->
+        <div class="band-item">
+            <h3>Ice Cube</h3>
+            <div class="band-tags">#Gangsta Rap #G-Funk #West Coast</div>
+            <p class="band-vibe">
+                從傳奇團體 N.W.A 出走後，Ice Cube 以極具侵略性的低沉嗓音與犀利如刀的社會觀察，定義了西岸匪幫饒舌的黃金年代。他的音樂充滿厚重的放克（Funk）低頻律動與毫不妥協的街頭真實感，像是在午夜洛杉磯街頭疾駛的經典重低音。
+            </p>
+            <ul class="track-list">
+                <li>It Was a Good Day</li>
+                <li>Check Yo Self</li>
+                <li>You Know How We Do It</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
