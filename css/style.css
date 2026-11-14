@@ -1,15 +1,15 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body, html {
-    width: 100%; height: 100%;
+    width: 100%; min-height: 100%;
     background-color: #020203; 
     color: rgba(255, 255, 255, 0.7);
     font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body::before {
-    content: ""; position: absolute;
+    content: ""; position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     background: radial-gradient(circle at 50% 50%, rgba(20, 25, 35, 0.8), #020203);
     z-index: 0; pointer-events: none;
@@ -21,10 +21,10 @@ body::before {
     opacity: 0.25; z-index: 0; pointer-events: none;
 }
 
-#lakeCanvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+#lakeCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
 
 #intro-text {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
     z-index: 3; font-size: 1.8rem; letter-spacing: 8px; font-style: italic;
     color: rgba(255, 255, 255, 0.5); text-shadow: 0 0 15px rgba(255,255,255,0.2);
     transition: opacity 2s ease; pointer-events: none;
@@ -37,50 +37,55 @@ body::before {
 #content.visible { opacity: 1; pointer-events: auto; }
 
 h1 {
-    font-size: 4rem; font-weight: 300; letter-spacing: 4px;
+    font-size: 3.5rem; font-weight: 300; letter-spacing: 4px;
     color: rgba(255, 255, 255, 0.9); margin-bottom: 0.5rem;
     text-shadow: 0 0 20px rgba(255,255,255,0.1);
 }
 
 .subtitle {
-    font-size: 1.1rem; font-weight: 200; letter-spacing: 8px; 
+    font-size: 1rem; font-weight: 200; letter-spacing: 8px; 
     margin-bottom: 3rem; color: rgba(255, 255, 255, 0.4);
 }
 
-.genre-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.genre-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1.5rem; 
+}
 
-.genre {
+/* 可點擊的純曲風方塊 */
+.genre-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(4px);
-    padding: 2.2rem;
+    padding: 3.5rem 2rem;
     border-radius: 2px;
     transition: border 0.4s ease, background 0.4s ease, transform 0.4s ease;
-    min-height: 180px;
 }
 
-.genre:hover {
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
+.genre-card:hover {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-3px);
 }
 
-h2 {
-    font-size: 1.8rem; font-weight: 300; font-style: italic; letter-spacing: 2px;
-    text-align: center;
-    margin-bottom: 1.2rem; color: rgba(255, 255, 255, 0.8);
+.genre-card h2 {
+    font-size: 2rem; font-weight: 300; font-style: italic; letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
 }
 
-.band-list { list-style: none; }
-
-/* 獨立在最下方的不能點擊文字 */
 .tbc {
     text-align: center;
     font-size: 0.9rem;
     font-style: italic;
     letter-spacing: 4px;
     color: rgba(255, 255, 255, 0.2);
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     pointer-events: none;
     user-select: none;
 }
