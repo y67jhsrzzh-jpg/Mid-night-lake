@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocteau Twins — Midnight Lake</title>
+    <title>Shoegaze — Midnight Lake</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+TC:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* 樂團內頁專屬微調樣式 */
-        .band-page {
-            max-width: 700px; margin: 0 auto; padding: 12vh 20px;
+        .genre-page {
+            max-width: 750px; margin: 0 auto; padding: 10vh 20px;
             position: relative; z-index: 2; color: rgba(255, 255, 255, 0.8);
         }
         .back-link {
@@ -20,34 +19,56 @@
             font-style: italic; letter-spacing: 2px; transition: color 0.3s;
         }
         .back-link:hover { color: rgba(255, 255, 255, 0.9); }
-        .band-page h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-        .tags { font-size: 0.9rem; letter-spacing: 3px; color: rgba(255, 255, 255, 0.4); margin-bottom: 2.5rem; font-style: italic; }
-        .section-block { margin-bottom: 3rem; line-height: 1.8; font-weight: 300; }
-        .section-block h3 { font-size: 1.3rem; font-style: italic; margin-bottom: 0.8rem; color: rgba(255, 255, 255, 0.9); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.3px; }
-        .track-list { list-style: none; padding-left: 0; }
-        .track-list li { padding: 0.5rem 0; border-bottom: 1px dashed rgba(255,255,255,0.08); }
+        
+        /* 曲風總介紹區塊 */
+        .genre-header { margin-bottom: 4rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 2.5rem; }
+        .genre-header h1 { font-size: 3.8rem; font-style: italic; margin-bottom: 1.2rem; }
+        .genre-desc { line-height: 1.9; font-weight: 300; color: rgba(255, 255, 255, 0.65); font-size: 1.05rem; }
+
+        /* 樂團獨立卡片區塊 */
+        .band-section-title { font-size: 1.1rem; letter-spacing: 5px; color: rgba(255, 255, 255, 0.35); margin-bottom: 2rem; text-transform: uppercase; }
+        .band-item {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2.5rem; margin-bottom: 2rem; border-radius: 2px;
+        }
+        .band-item h3 { font-size: 2.2rem; font-weight: 300; color: rgba(255, 255, 255, 0.9); margin-bottom: 0.5rem; }
+        .band-tags { font-size: 0.85rem; letter-spacing: 2px; color: rgba(255, 255, 255, 0.4); font-style: italic; margin-bottom: 1.5rem; }
+        .band-vibe { line-height: 1.8; font-weight: 300; margin-bottom: 1.5rem; color: rgba(255, 255, 255, 0.75); }
+        .track-list { list-style: none; border-top: 1px dashed rgba(255, 255, 255, 0.1); padding-top: 1rem; }
+        .track-list li { font-size: 0.95rem; padding: 0.3rem 0; color: rgba(255, 255, 255, 0.6); font-style: italic; }
+        .track-list li::before { content: "— "; color: rgba(255, 255, 255, 0.3); }
     </style>
 </head>
 <body>
     <div class="noise-overlay"></div>
-    <div class="band-page">
+    <div class="genre-page">
         <a href="../index.html" class="back-link">← 返回湖面</a>
-        <h1>Cocteau Twins</h1>
-        <div class="tags">#Ethereal Wave #Dream Pop #Shoegaze</div>
         
-        <div class="section-block">
-            <h3>聽感與氛圍</h3>
-            <p>來自蘇格蘭的 Cocteau Twins 創造了彷彿不屬於人間的聲音景觀。 Elizabeth Fraser 那難以言喻、超越語言限制的空靈人聲，交織著重度回音與層層堆疊的吉他音牆。他們的音樂像是一場漫長而溫柔的迷霧，帶著孤寂、華麗與深邃的空間感。</p>
+        <!-- 曲風文字介紹 -->
+        <div class="genre-header">
+            <h1>Shoegaze</h1>
+            <p class="genre-desc">
+                誕生於 1980 年代末期的英國獨立搖滾浪潮。樂手在演出時習慣低頭專注於腳下的吉他效果器，因而得名「瞪鞋」。這類音樂以極度失真、層層堆疊的吉他音牆（Wall of Sound）為骨架，將模糊、囈語般的人聲深埋在巨大的殘響與噪音漩渦之中，營造出既轟鳴又極度夢幻的沉浸式空間感。
+            </p>
         </div>
 
-        <div class="section-block">
-            <h3>必聽推薦曲目</h3>
+        <!-- 相關樂團介紹 -->
+        <div class="band-section-title">Selected Artists / 收錄樂團</div>
+        
+        <div class="band-item">
+            <h3>Cocteau Twins</h3>
+            <div class="band-tags">#Ethereal Wave #Dream Pop #Shoegaze Pioneer</div>
+            <p class="band-vibe">
+                來自蘇格蘭的傳奇樂團，為後世的瞪鞋與夢幻流行奠定了美學基石。主唱 Elizabeth Fraser 跨越語言邊界的空靈嗓音，交織著重度回音與閃爍的效果器吉他，創造出彷彿沉入深海或漫步迷霧的孤寂與華麗感。
+            </p>
             <ul class="track-list">
                 <li>Heaven or Las Vegas</li>
                 <li>Cherry-coloured Funk</li>
                 <li>Sea, Swallow Me</li>
             </ul>
         </div>
+
     </div>
 </body>
 </html>
