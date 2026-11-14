@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jangle Pop — Midnight Lake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+TC:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .genre-page {
+            max-width: 750px; margin: 0 auto; padding: 10vh 20px;
+            position: relative; z-index: 2; color: rgba(255, 255, 255, 0.8);
+        }
+        .back-link {
+            display: inline-block; margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.4); text-decoration: none;
+            font-style: italic; letter-spacing: 2px; transition: color 0.3s;
+        }
+        .back-link:hover { color: rgba(255, 255, 255, 0.9); }
+        
+        /* 曲風總介紹區塊 */
+        .genre-header { margin-bottom: 4rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 2.5rem; }
+        .genre-header h1 { font-size: 3.8rem; font-style: italic; margin-bottom: 1.2rem; }
+        .genre-desc { line-height: 1.9; font-weight: 300; color: rgba(255, 255, 255, 0.65); font-size: 1.05rem; }
+
+        /* 樂團獨立卡片區塊 */
+        .band-section-title { font-size: 1.1rem; letter-spacing: 5px; color: rgba(255, 255, 255, 0.35); margin-bottom: 2rem; text-transform: uppercase; }
+        .band-item {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2.5rem; margin-bottom: 2rem; border-radius: 2px;
+            transition: border 0.4s ease, background 0.4s ease;
+        }
+        .band-item:hover {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .band-item h3 { font-size: 2.2rem; font-weight: 300; color: rgba(255, 255, 255, 0.9); margin-bottom: 0.5rem; }
+        .band-tags { font-size: 0.85rem; letter-spacing: 2px; color: rgba(255, 255, 255, 0.4); font-style: italic; margin-bottom: 1.5rem; }
+        .band-vibe { line-height: 1.8; font-weight: 300; margin-bottom: 1.5rem; color: rgba(255, 255, 255, 0.75); }
+        .track-list { list-style: none; border-top: 1px dashed rgba(255, 255, 255, 0.1); padding-top: 1rem; }
+        .track-list li { font-size: 0.95rem; padding: 0.3rem 0; color: rgba(255, 255, 255, 0.6); font-style: italic; }
+        .track-list li::before { content: "— "; color: rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="genre-page">
+        <a href="../index.html" class="back-link">← 返回湖面</a>
+        
+        <!-- 曲風文字介紹 -->
+        <div class="genre-header">
+            <h1>Jangle Pop</h1>
+            <p class="genre-desc">
+                以清脆、明亮且帶有金屬共鳴感的電吉他分解和弦（Jangly Guitars）為標誌的獨立流行樂風。看似輕快透明的旋律背後，往往包裹著內斂、敏感甚至略帶苦澀的青年憂鬱，就像在深夜微風吹拂下，湖面上閃爍著微光的細碎波紋。
+            </p>
+        </div>
+
+        <!-- 相關樂團介紹 -->
+        <div class="band-section-title">Selected Artists / 收錄樂團</div>
+        
+        <!-- 樂團一：The Smiths -->
+        <div class="band-item">
+            <h3>The Smiths</h3>
+            <div class="band-tags">#80s Indie #Jangle Pop #Manchester</div>
+            <p class="band-vibe">
+                1980 年代英國獨立音樂的無冕之王。吉他手 Johnny Marr 如流水般清澈華麗的吉他編曲，完美襯托著主唱 Morrissey 充滿文學性、孤僻卻又極度浪漫的戲劇化唱腔，成為無數敏感靈魂在深夜裡的共鳴。
+            </p>
+            <ul class="track-list">
+                <li>There Is a Light That Never Goes Out</li>
+                <li>Heaven Knows I'm Miserable Now</li>
+                <li>This Charming Man</li>
+            </ul>
+        </div>
+
+        <!-- 樂團二：Mac DeMarco -->
+        <div class="band-item">
+            <h3>Mac DeMarco</h3>
+            <div class="band-tags">#Slacker Rock #Lo-fi Jangle #Dreamy</div>
+            <p class="band-vibe">
+                現代慵懶美學的代表人物，以帶有合唱效果（Chorus）與磁帶顫音的暖色調吉他音色聞名。Mac DeMarco 的音樂像是深夜陽台上一支燃到一半的香菸，用看似隨性、漫不經心的節拍，唱出對愛情、時間流逝與存在感的溫柔惆悵。
+            </p>
+            <ul class="track-list">
+                <li>Chamber of Reflection</li>
+                <li>Salad Days</li>
+                <li>My Kind of Woman</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
