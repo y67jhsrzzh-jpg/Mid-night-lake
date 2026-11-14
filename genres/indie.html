@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indie — Midnight Lake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+TC:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .genre-page {
+            max-width: 750px; margin: 0 auto; padding: 10vh 20px;
+            position: relative; z-index: 2; color: rgba(255, 255, 255, 0.8);
+        }
+        .back-link {
+            display: inline-block; margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.4); text-decoration: none;
+            font-style: italic; letter-spacing: 2px; transition: color 0.3s;
+        }
+        .back-link:hover { color: rgba(255, 255, 255, 0.9); }
+        
+        /* 曲風總介紹區塊 */
+        .genre-header { margin-bottom: 4rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 2.5rem; }
+        .genre-header h1 { font-size: 3.8rem; font-style: italic; margin-bottom: 1.2rem; }
+        .genre-desc { line-height: 1.9; font-weight: 300; color: rgba(255, 255, 255, 0.65); font-size: 1.05rem; }
+
+        /* 樂團獨立卡片區塊 */
+        .band-section-title { font-size: 1.1rem; letter-spacing: 5px; color: rgba(255, 255, 255, 0.35); margin-bottom: 2rem; text-transform: uppercase; }
+        .band-item {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2.5rem; margin-bottom: 2rem; border-radius: 2px;
+            transition: border 0.4s ease, background 0.4s ease;
+        }
+        .band-item:hover {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .band-item h3 { font-size: 2.2rem; font-weight: 300; color: rgba(255, 255, 255, 0.9); margin-bottom: 0.5rem; }
+        .band-tags { font-size: 0.85rem; letter-spacing: 2px; color: rgba(255, 255, 255, 0.4); font-style: italic; margin-bottom: 1.5rem; }
+        .band-vibe { line-height: 1.8; font-weight: 300; margin-bottom: 1.5rem; color: rgba(255, 255, 255, 0.75); }
+        .track-list { list-style: none; border-top: 1px dashed rgba(255, 255, 255, 0.1); padding-top: 1rem; }
+        .track-list li { font-size: 0.95rem; padding: 0.3rem 0; color: rgba(255, 255, 255, 0.6); font-style: italic; }
+        .track-list li::before { content: "— "; color: rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="genre-page">
+        <a href="../index.html" class="back-link">← 返回湖面</a>
+        
+        <!-- 曲風文字介紹 -->
+        <div class="genre-header">
+            <h1>Indie</h1>
+            <p class="genre-desc">
+                強調獨立自主精神與實驗美學的音樂光譜。不被主流商業公式綁架，Indie 涵蓋了從粗礪的車庫搖滾、迷幻聲響到臥室 Lo-fi 採樣的各種可能。它捕捉了現代人內心微妙的疏離感、無處安放的躁動，以及在深夜獨處時最真實的情緒切片。
+            </p>
+        </div>
+
+        <!-- 相關樂團介紹 -->
+        <div class="band-section-title">Selected Artists / 收錄樂團</div>
+        
+        <!-- 樂團一：Cage the Elephant -->
+        <div class="band-item">
+            <h3>Cage the Elephant</h3>
+            <div class="band-tags">#Indie Rock #Garage Rock #Psychedelic</div>
+            <p class="band-vibe">
+                來自美國肯塔基州的另類搖滾樂團，將車庫搖滾的生猛能量與迷幻色彩完美融合。他們的旋律線條極具記憶點，在主唱略帶神經質與情緒張力的嗓音背後，往往藏著對現代生活疲憊、孤獨與自我拉扯的深刻書寫。
+            </p>
+            <ul class="track-list">
+                <li>Cigarette Daydreams</li>
+                <li>Trouble</li>
+                <li>Ain't No Rest for the Wicked</li>
+            </ul>
+        </div>
+
+        <!-- 樂團二：TV Girl -->
+        <div class="band-item">
+            <h3>TV Girl</h3>
+            <div class="band-tags">#Hypnagogic Pop #Sample-based #Lo-fi Indie</div>
+            <p class="band-vibe">
+                擅長大量拼貼 1960 年代復古老歌與電影對白採樣，搭配慵懶、帶有催眠感的電子節拍。TV Girl 的音樂像是一部褪色的老式錄影帶，表面聽起來輕快迷幻，歌詞卻充滿了冷眼旁觀的浪漫、都市戀愛的疏離與淡淡的憂鬱。
+            </p>
+            <ul class="track-list">
+                <li>Lovers Rock</li>
+                <li>Not Allowed</li>
+                <li>Cigarettes out the Window</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
